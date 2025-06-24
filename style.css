@@ -61,6 +61,15 @@ body {
     }
   }
 
+  @media (max-width: 1024px) {
+    .callToActionBGWrap.callToAction .slogan {
+        font-size: 16px;
+    }
+    .callToActionBGWrap .container {
+        padding-top: 130px;
+    }
+  }
+
   .logoWrap {
     display: flex;
     align-items: center;
@@ -102,10 +111,9 @@ body {
     background-size: cover;
     background-position: 65%;
     display: flex;
-    height: 100vh;
     flex-direction: column;
   }
-  
+
   .callToActionBGWrap.callToAction {
     display: flex;
     flex-direction: column;
@@ -159,6 +167,19 @@ body {
     .callToActionBGWrap.callToAction {
       justify-content: flex-start;
       height: 110vh;
+
+
+        background-image: -webkit-image-set(
+            url('./images/CAT-mobile-background.png') 1x,
+            url('./images/CAT-mobile-background-retina.png') 2x
+          );
+          background-image: image-set(
+            url('./images/CAT-mobile-background.png') 1x,
+            url('./images/CAT-mobile-background-retina.png') 2x
+          );
+      background-size: cover;
+      background-position: center;
+
     }
   
     .callToActionBGWrap.callToAction .mainTitle {
@@ -181,6 +202,22 @@ body {
       margin: 20px auto 0;
       color: #fff;
       background: #618135;
+    }
+
+    .callToActionBGWrap.callToAction .container {
+        padding-top: 0;
+        margin-top: 150px;
+    }
+    .callToActionBGWrap.callToAction .mainTitle {
+        font-size: 24px;
+    }
+
+    .callToActionBGWrap.callToAction .slogan {
+        font-size: 15px;
+    }
+
+    .newsletter-form {
+        justify-content: center;
     }
   }
 
