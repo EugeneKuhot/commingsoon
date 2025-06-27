@@ -334,13 +334,13 @@ input:focus {
     width: 100%;
   }
   .footer {
-    width: 255px;
+    width: 265px;
     color: white;
     background-color: rgba(29, 25, 25, 0.579);
     border-radius: 0 5px 0 0;
     margin-left: -21px;
     margin-bottom: 0;
-    padding: 5px 5px 5px 20px;
+    padding: 5px 5px 5px 15px;
   }
   .footer a {
     color: #69ad61;
