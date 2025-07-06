@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -15,46 +14,38 @@ body {
   margin: auto;
 }
 .header {
-  width: 100%;
+  width: 95%;
+  max-width: 1800px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: transparent;
   position: absolute;
-}
-.topInfo {
-  width: 100%;
-  max-width: 1800px;
-  display: flex;
-}
-.headerMail {
-  width: 50%;
-  padding: 35px 0 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  padding: 25px 25px;
 }
 .mailWrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 10px;
   background-color: white;
   padding: 0 15px 0 15px;
-  height: 40px;
+  height: 45px;
+  width: 270px;
 }
-.mailWrapper p {
+.mailWrapper a {
   color: #484747;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   margin: 0 0 0 10px;
+  text-decoration: none;
 }
-.mailWrapper p:hover {
+.mailWrapper a:hover {
   text-decoration: underline;
   cursor: pointer;
-}
-.headerTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 50%;
-  padding: 35px 0 0;
 }
 .headerLogo {
   font-weight: bold;
@@ -124,8 +115,9 @@ body {
   min-height: 100vh;
 }
 .callToActionBGWrap.callToAction .mainTitle {
+  width: 55%;
   margin: 0 0 20px;
-  font-size: 35px;
+  font-size: 2.35rem;
   font-weight: 600;
   line-height: 46px;
   color: #618135;
@@ -138,10 +130,14 @@ body {
   font-size: 46px;
 }
 .callToActionBGWrap.callToAction .slogan {
-  width: 45%;
-  margin: 0;
-  font-size: 20px;
+  width: 47%;
+  margin: 0 0 45px 0;
+  font-size: 1.37rem;
   line-height: 1.5;
+  color: #717070;
+}
+.callToActionBGWrap.callToAction .leaveEmail {
+  font-size: 1.25rem;
   color: #717070;
 }
 form button {
@@ -185,73 +181,75 @@ input:focus {
   display: flex;
   margin: 10px 0 0 0;
 }
-.donat {
+.donate {
   display: flex;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 25px;
+  width: 100%;
 }
-.donat img {
+.donate img {
   width: 150px;
   height: 150px;
   border-radius: 24px;
 }
-.donatInfo {
+.donateInfo {
   padding-left: 7px;
   padding-top: 3px;
   margin: 0;
 }
-.donatInfo h4 {
+.donateInfo h4 {
+  color: black;
+  width: 70%;
   margin: 0 5px;
   font-size: 16px;
   font-weight: 600;
   line-height: 25px;
 }
-.donatInfo h4 span {
+.donateInfo h4 span {
   color: #618135;
 }
-.donatInfo p {
+.donateInfo p {
   padding-top: 5px;
   width: 55%;
   margin: 0 5px;
-  font-size: 13px;
+  font-size: 16px;
   color: #717070;
   line-height: 20px;
 }
-.donatInfo .donatButton {
+.donateInfo .donateButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 164px;
+  height: 32px;
   padding: 5px 40px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   border-radius: 50px;
-  margin: 10px 0;
+  margin: 12px 0;
   background-color: #618135;
   color: #f7f5ec;
   border: 2px solid #618135;
   cursor: pointer;
   text-decoration: none;
 }
-.donatInfo .donatButton:hover {
+.donateInfo .donateButton:hover {
   background-color: #f7f5ec;
   color: #618135;
   transition: all 0.2s ease;
 }
-.donatButtonContainer {
-  width: 55%;
-  margin: 15px 0;
-}
-footer {
-  width: 100%;
-  height: 50px;
-  padding: 0 70px;
+footer.container {
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  margin-bottom: 0;
-  color: white;
-  font-size: 10px;
-  font-weight: 400;
+  margin-bottom: 30px;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.container .footer {
+  margin: 0;
+  width: 23%;
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 400;
 }
