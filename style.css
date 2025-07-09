@@ -16,14 +16,12 @@ body {
 .header {
   width: 95%;
   max-width: 1800px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  position: absolute;
   padding: 25px 25px;
 }
 .mailWrapper {
@@ -95,12 +93,12 @@ body {
 }
 .callToActionBGWrap {
   background-image: -webkit-image-set(
-    url("./images/mainPageBackground.png") 1x,
-    url("./images/mainPageBackgroundRetina.png") 2x
+    url("./images/background.png") 1x,
+    url("./images/backgroundRetina.png") 2x
   );
   background-image: image-set(
-    url("./images/mainPageBackground.png") 1x,
-    url("./images/mainPageBackgroundRetina.png") 2x
+    url("./images/background.png") 1x,
+    url("./images/backgroundRetina.png") 2x
   );
   background-size: cover;
   background-position: 65%;
@@ -117,7 +115,7 @@ body {
 .callToActionBGWrap.callToAction .mainTitle {
   width: 55%;
   margin: 0 0 20px;
-  font-size: 2.35rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 46px;
   color: #618135;
@@ -132,7 +130,7 @@ body {
 .callToActionBGWrap.callToAction .slogan {
   width: 47%;
   margin: 0 0 45px 0;
-  font-size: 1.37rem;
+  font-size: 1.6rem;
   line-height: 1.5;
   color: #717070;
 }
@@ -224,7 +222,7 @@ input:focus {
   align-items: center;
   width: 164px;
   height: 32px;
-  padding: 5px 40px;
+  padding: 5px 0;
   font-size: 16px;
   font-weight: 500;
   border-radius: 50px;

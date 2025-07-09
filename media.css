@@ -1,23 +1,9 @@
 /* Desktop & Tablets */
 
 @media screen and (max-width: 1400px) {
-  .callToActionBGWrap {
-    background-image: -webkit-image-set(
-      url("./images/Mask\ group.png") 1x,
-      url("./images/Mask\ group.retina.png") 2x
-    );
-    background-image: image-set(
-      url("./images/Mask\ group.png") 1x,
-      url("./images/Mask\ group.retina.png") 2x
-    );
-    background-size: cover;
-    background-position: 65%;
-    display: flex;
-    flex-direction: column;
-  }
   .callToActionBGWrap.callToAction .mainTitle {
-    width: 60%;
-    font-size: 2.2rem;
+    width: 55%;
+    font-size: 2rem;
   }
   .callToActionBGWrap.callToAction .slogan {
     font-size: 1.3rem;
@@ -37,14 +23,15 @@
   }
   .donateInfo h4 {
     width: 45%;
+    line-height: 24px;
   }
   .donateInfo p {
     font-size: 0.9rem;
     width: 40%;
   }
   .donate img {
-    width: 197px;
-    height: 190px;
+    width: 180px;
+    height: 173px;
   }
   .container {
     padding: 0;
@@ -52,8 +39,25 @@
   .header {
     padding: 25px 0;
   }
+  .donateInfo .donateButton {
+    width: 143px;
+    height: 27px;
+    font-size: 0.9rem;
+    margin: 9px 15px;
+  }
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1300px) {
+  .callToActionBGWrap {
+    background-image: -webkit-image-set(
+      url("./images/br1300.png") 1x,
+      url("./images/retina1300.png") 3x
+    );
+    background-image: image-set(
+      url("./images/br1300.png") 1x,
+      url("./images/retina1300.png") 3x
+    );
+    background-size: cover;
+  }
   .callToActionBGWrap.callToAction .mainTitle {
     font-size: 2rem;
   }
@@ -84,17 +88,6 @@
   }
 }
 @media screen and (max-width: 1220px) {
-  .callToActionBGWrap {
-    background-image: -webkit-image-set(
-      url("./images/backgroundTablet.png") 1x,
-      url("./images/backgroundTabletRetina.png") 3x
-    );
-    background-image: image-set(
-      url("./images/backgroundTablet.png") 1x,
-      url("./images/backgroundTabletRetina.png") 3x
-    );
-    background-size: cover;
-  }
   .callToActionBGWrap.callToAction .mainTitle {
     width: 70%;
     font-size: 2.4rem;
