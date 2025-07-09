@@ -170,9 +170,13 @@ form button:hover {
   width: 320px;
   height: 55px;
   border-radius: 50px;
-  padding: 0 15px;
+  padding: 0 25px;
   font-size: 18px;
-  border: none;
+  border: 1px solid transparent;
+  outline: none;
+}
+input::placeholder {
+  color: #a0a0a0;
 }
 input:focus {
   border: 1px solid #618135;
@@ -186,9 +190,9 @@ input:focus {
   width: 100%;
 }
 .donate img {
-  width: 150px;
-  height: 150px;
-  border-radius: 24px;
+  width: 147px;
+  height: 140px;
+  border-radius: 25px;
 }
 .donateInfo {
   padding-left: 7px;
@@ -198,7 +202,7 @@ input:focus {
 .donateInfo h4 {
   color: black;
   width: 70%;
-  margin: 0 5px;
+  margin: 0 15px;
   font-size: 16px;
   font-weight: 600;
   line-height: 25px;
@@ -209,7 +213,7 @@ input:focus {
 .donateInfo p {
   padding-top: 5px;
   width: 55%;
-  margin: 0 5px;
+  margin: 0 15px;
   font-size: 16px;
   color: #717070;
   line-height: 20px;
@@ -224,7 +228,7 @@ input:focus {
   font-size: 16px;
   font-weight: 500;
   border-radius: 50px;
-  margin: 12px 0;
+  margin: 12px 15px;
   background-color: #618135;
   color: #f7f5ec;
   border: 2px solid #618135;
