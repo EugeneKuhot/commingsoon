@@ -1,257 +1,236 @@
+/* Reset & Defaults */
 * {
   box-sizing: border-box;
 }
+
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
   padding: 0;
-}
-.container {
-  padding: 0 25px;
-  width: 95%;
-  max-width: 1800px;
-  font-size: 18px;
-  margin: auto;
-}
-.header {
-  width: 95%;
-  max-width: 1800px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;
-  padding: 25px 25px;
-}
-.mailWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  background-color: white;
-  padding: 0 15px 0 15px;
-  height: 45px;
-  width: 270px;
-}
-.mailWrapper a {
-  color: #484747;
-  font-size: 18px;
-  font-weight: 400;
-  margin: 0 0 0 10px;
-  text-decoration: none;
-}
-.mailWrapper a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.headerLogo {
-  font-weight: bold;
-  font-size: 24px;
-  text-decoration: none;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 190px;
-  transition: all 0.2s ease;
-}
-.headerLogo:hover,
-.headerLogo:focus-visible {
-  opacity: 0.7;
-}
-.logoWrap {
-  display: flex;
-  align-items: center;
-}
-.logoWrap:hover .computerLight,
-.logoWrap:focus .computerLight {
-  -webkit-animation: blink-1 0.6s both;
-  animation: blink-1 0.6s both;
-}
-@-webkit-keyframes blink-1 {
-  0%,
-  50%,
-  100% {
-    opacity: 0.5;
-  }
-  25%,
-  75% {
-    opacity: 0;
-  }
-}
-@keyframes blink-1 {
-  0%,
-  50%,
-  100% {
-    opacity: 0.5;
-  }
-  25%,
-  75% {
-    opacity: 0;
-  }
-}
-.callToActionBGWrap {
-  background-image: -webkit-image-set(
-    url("./images/background.png") 1x,
-    url("./images/backgroundRetina.png") 2x
-  );
+  font-family: "ProbaPro", sans-serif;
   background-image: image-set(
-    url("./images/background.png") 1x,
-    url("./images/backgroundRetina.png") 2x
+          url("./images/background.webp") 1x,
+          url("./images/backgroundRetina.webp") 2x
   );
   background-size: cover;
   background-position: 65%;
-  display: flex;
-  flex-direction: column;
+  background-repeat: no-repeat;
 }
-.callToActionBGWrap.callToAction {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  min-height: 100vh;
-}
-.callToActionBGWrap.callToAction .mainTitle {
-  width: 55%;
-  margin: 0 0 20px;
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 46px;
-  color: #618135;
-}
-.blackText {
-  color: black;
-}
-.callToActionBGWrap.callToAction .mainTitle .firmNameInMainTitle {
-  color: #618135;
-  font-size: 46px;
-}
-.callToActionBGWrap.callToAction .slogan {
-  width: 47%;
-  margin: 0 0 45px 0;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  color: #717070;
-}
-.callToActionBGWrap.callToAction .leaveEmail {
-  font-size: 1.25rem;
-  color: #717070;
-}
-form button {
-  height: 53px;
-  display: flex;
-  align-items: center;
-  background-color: #f7f5ec;
-  color: #618135;
-  border: 2px solid #618135;
-  margin: auto 16px;
-  width: 160px;
-  justify-content: center;
-  padding: 12px 0;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-form {
-  margin-top: 30px;
-}
-form button:hover {
-  background-color: #618135;
-  color: #f7f5ec !important;
-  transition: all 0.2s ease;
-}
-.newsletter-form input {
-  width: 320px;
-  height: 55px;
-  border-radius: 50px;
+
+/* Layout */
+.container {
+  width: 95%;
+  max-width: 1800px;
+  margin: 0 auto;
   padding: 0 25px;
   font-size: 18px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover,
+.logo:focus-visible {
+  opacity: 0.7;
+}
+
+.email-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px 18px 12px 48px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #484747;
+  background-color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.email-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  width: 20px;
+  height: 20px;
+  background: url('./images/letter.svg') no-repeat center center;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.email-link:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+
+.hero-title {
+  margin-top: calc(10vh - 20px);
+  margin-bottom: 20px;
+  font-size: 45px;
+  font-weight: 600;
+  color: #000;
+  width: 55%;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #618135;;
+}
+
+.hero-subtitle {
+  width: 47%;
+  margin: 0 0 45px 0;
+  font-size: 22px;
+  color: #000;
+  font-weight: 400;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* Newsletter Form */
+.newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.newsletter input[type="email"] {
+  width: 320px;
+  height: 64px;
+  padding: 0 25px;
+  font-size: 18px;
+  border-radius: 50px;
   border: 1px solid transparent;
   outline: none;
 }
-input::placeholder {
+
+.newsletter input::placeholder {
   color: #a0a0a0;
+  font-weight: 400;
 }
-input:focus {
-  border: 1px solid #618135;
+
+.newsletter input:focus {
+  border-color: #618135;
 }
-.newsletter-form {
-  display: flex;
-  margin: 10px 0 0 0;
+
+.newsletter button {
+  width: 160px;
+  height: 64px;
+  padding: 12px 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+  border-radius: 50px;
+  border: 2px solid #618135;
+  background-color: #618135;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
+
+.newsletter button:hover {
+  background-color: #fff;
+  color: #618135;
+}
+
+/* Donate Block */
 .donate {
   display: flex;
-  width: 100%;
+  width: 510px;
+  gap: 16px;
+  align-items: center;
 }
+
 .donate img {
   width: 147px;
   height: 140px;
   border-radius: 25px;
+  object-fit: cover;
 }
-.donateInfo {
-  padding-left: 7px;
-  padding-top: 3px;
-  margin: 0;
+
+.donate-content {
+  flex: 1;
 }
-.donateInfo h4 {
-  color: black;
-  width: 70%;
-  margin: 0 15px;
-  font-size: 16px;
+
+.donate-content h4 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 25px;
+  color: black;
 }
-.donateInfo h4 span {
+
+.donate-content h4 span {
   color: #618135;
 }
-.donateInfo p {
-  padding-top: 5px;
-  width: 55%;
-  margin: 0 15px;
+
+.donate-content p {
+  margin: 0 0 12px 0;
   font-size: 16px;
   color: #717070;
-  line-height: 20px;
+  line-height: 1.5;
 }
-.donateInfo .donateButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 164px;
-  height: 32px;
-  padding: 5px 0;
+
+.donate-btn {
+  padding: 5px 40px;
   font-size: 16px;
   font-weight: 500;
   border-radius: 50px;
-  margin: 12px 15px;
   background-color: #618135;
   color: #f7f5ec;
   border: 2px solid #618135;
-  cursor: pointer;
   text-decoration: none;
-}
-.donateInfo .donateButton:hover {
-  background-color: #f7f5ec;
-  color: #618135;
+  cursor: pointer;
   transition: all 0.2s ease;
 }
-footer.container {
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+
+.donate-btn:hover {
+  background-color: #f7f5ec;
+  color: #618135;
 }
-.container .footer {
-  margin: 0;
-  width: 23%;
-  font-size: 0.75rem;
-  color: white;
-  font-weight: 400;
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-bottom: 30px;
+  font-size: 14px;
+  color: #999;
+}
+
+.footer-note {
+  margin: auto 0 0;
 }
