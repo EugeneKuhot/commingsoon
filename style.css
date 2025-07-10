@@ -15,7 +15,7 @@ body {
           url("./images/backgroundRetina.webp") 2x
   );
   background-size: cover;
-  background-position: 65%;
+  background-position-y: 25%;
   background-repeat: no-repeat;
 }
 
@@ -87,16 +87,16 @@ body {
 .hero {
   display: flex;
   flex-direction: column;
+  width: 55%;
   padding-bottom: 60px;
 }
 
 .hero-title {
-  margin-top: calc(10vh - 20px);
+  margin-top: calc(15vh - 20px);
   margin-bottom: 20px;
   font-size: 45px;
   font-weight: 600;
   color: #000;
-  width: 55%;
   line-height: 1.2;
 }
 
@@ -105,16 +105,15 @@ body {
 }
 
 .hero-subtitle {
-  width: 47%;
   margin: 0 0 45px 0;
   font-size: 22px;
-  color: #000;
+  color: #717070;
   font-weight: 400;
 }
 
 .hero-description {
   font-size: 1.25rem;
-  color: #000;
+  color: #717070;
   margin-bottom: 20px;
 }
 
