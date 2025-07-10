@@ -50,11 +50,11 @@
   .callToActionBGWrap {
     background-image: -webkit-image-set(
       url("./images/br1300.png") 1x,
-      url("./images/retina1300.png") 3x
+      url("./images/retina1300.webp") 3x
     );
     background-image: image-set(
       url("./images/br1300.png") 1x,
-      url("./images/retina1300.png") 3x
+      url("./images/retina1300.webp") 3x
     );
     background-size: cover;
   }
