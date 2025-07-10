@@ -156,10 +156,6 @@ body {
   font-weight: 400;
 }
 
-.newsletter input:focus {
-  border-color: #618135;
-}
-
 .newsletter button {
   width: 160px;
   height: 64px;
@@ -173,12 +169,21 @@ body {
   color: #fff;
   cursor: pointer;
   transition: all 0.2s ease;
-  animation: pulseOpacity 3s ease-in-out infinite;
 }
 
 .newsletter button:hover {
   background-color: #fff;
   color: #618135;
+}
+
+button, input[type=email], .donate-btn {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+button:hover, input[type=email]:hover, donate-btn:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
 }
 
 /* Donate Block */
