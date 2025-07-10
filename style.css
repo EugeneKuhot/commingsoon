@@ -10,6 +10,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: "ProbaPro", sans-serif;
+}
+
+.bodyBG {
   background-image: image-set(
     url("./images/background.webp") 1x,
     url("./images/backgroundRetina.webp") 2x
@@ -44,12 +47,13 @@ body {
   font-weight: bold;
   color: black;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: all 1s ease;
 }
 
-.logo:hover,
-.logo:focus-visible {
-  opacity: 0.7;
+.logo:hover .computerLight,
+.logo:focus-visible .computerLight {
+  -webkit-animation: blink-1 0.6s both;
+  animation: blink-1 0.6s both;
 }
 
 .email-link {
@@ -73,7 +77,7 @@ body {
   left: 18px;
   width: 20px;
   height: 20px;
-  background: url("./images/letter.svg") no-repeat center center;
+  background: url('./images/letter.svg') no-repeat center center;
   background-size: contain;
   transform: translateY(-50%);
 }
@@ -143,7 +147,7 @@ body {
   padding: 0 25px;
   font-size: 18px;
   border-radius: 50px;
-  border: 1px solid transparent;
+  border: 1px solid #618135;
   outline: none;
 }
 
@@ -187,7 +191,7 @@ body {
 
 .donate img {
   width: 147px;
-  height: 140px;
+  height: 150px;
   border-radius: 25px;
   object-fit: cover;
   animation: slideInRight 0.6s ease-out forwards;
@@ -250,47 +254,133 @@ body {
 }
 
 .footer-note {
+  display: flex;
+  flex-direction: column;
   margin: auto 0 0;
 }
-/* Общие анимации */
-@keyframes fadeIn {
-  0% {
+
+.footer-note a {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    text-align: end;
+    transition: all .3s ease;
+}
+
+.footer-note a:hover {
+    opacity: 0.7;
+    transition: all 1s ease;
+}
+
+@-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 0.2;
+  }
+  25%,
+  75% {
     opacity: 0;
   }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
   100% {
-    opacity: 1;
+    opacity: 0.2;
   }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Пульсация кнопки Поддержать */
 @keyframes pulseOpacity {
-  0%,
-  100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* terms page */
+
+.terms-page {
+  padding: 60px 0;
+  background: url('./images/reviews.png') center 33vh no-repeat;
+  background-size: cover;
+}
+
+.terms-page .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffffcc;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.terms-page .title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.terms-page .section {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-left: 4px solid #618135;
+  background-color: #f9f9f9;
+}
+
+.terms-page .section-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.terms-page .paragraph {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.link {
+  color: #618135;
 }

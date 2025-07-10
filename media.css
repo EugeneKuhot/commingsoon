@@ -167,6 +167,50 @@
   }
 }
 
+/* terms page */
+
+@media (max-width: 768px) {
+  .terms-page .container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .terms-page .title {
+    font-size: 1.8rem;
+  }
+
+  .terms-page .section-title {
+    font-size: 1.5rem;
+  }
+
+  .terms-page .paragraph {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-page .container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .terms-page .title {
+    font-size: 1.5rem;
+  }
+
+  .terms-page .section {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .terms-page .section-title {
+    font-size: 1.2rem;
+  }
+
+  .terms-page .paragraph {
+    font-size: 0.9rem;
+  }
+}
 
 /* Mobile version */
 /*
