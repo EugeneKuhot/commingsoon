@@ -104,8 +104,16 @@ body {
   line-height: 1.2;
 }
 
-.highlight {
+.uppercase {
+  text-transform: uppercase;
+}
+
+.highlightGreen {
   color: #618135;
+}
+
+.highlightBlue {
+  color: #32477c;
 }
 
 .hero-subtitle {
@@ -115,10 +123,19 @@ body {
   font-weight: 400;
 }
 
+.hero-subtitle .highlightGreen {
+  font-weight: 500;
+}
+
 .hero-description {
   font-size: 1.25rem;
   color: #717070;
   margin-bottom: 20px;
+}
+
+.hero-description .highlightGreen,
+.hero-description .highlightBlue {
+  font-weight: 500;
 }
 
 /* Newsletter Form */
@@ -202,10 +219,6 @@ input[type="email"]:hover,
   font-size: 20px;
   font-weight: 600;
   color: black;
-}
-
-.donate-content h4 span {
-  color: #618135;
 }
 
 .donate-content p {
