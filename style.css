@@ -77,7 +77,7 @@ body {
   left: 18px;
   width: 20px;
   height: 20px;
-  background: url('./images/letter.svg') no-repeat center center;
+  background: url("./images/letter.svg") no-repeat center center;
   background-size: contain;
   transform: translateY(-50%);
 }
@@ -102,9 +102,6 @@ body {
   font-weight: 600;
   color: #000;
   line-height: 1.2;
-  animation: fadeInUp 0.6s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
 }
 
 .highlight {
@@ -116,18 +113,12 @@ body {
   font-size: 22px;
   color: #717070;
   font-weight: 400;
-  animation: fadeIn 0.4s ease-out forwards;
-  animation-delay: 0.8s;
-  opacity: 0;
 }
 
 .hero-description {
   font-size: 1.25rem;
   color: #717070;
   margin-bottom: 20px;
-  animation: fadeIn 0.4s ease-out forwards;
-  animation-delay: 0.8s;
-  opacity: 0;
 }
 
 /* Newsletter Form */
@@ -136,9 +127,6 @@ body {
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 10px;
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 1s;
-  opacity: 0;
 }
 
 .newsletter input[type="email"] {
@@ -176,12 +164,16 @@ body {
   color: #618135;
 }
 
-button, input[type=email], .donate-btn {
+button,
+input[type="email"],
+.donate-btn {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease;
 }
 
-button:hover, input[type=email]:hover, .donate-btn:hover {
+button:hover,
+input[type="email"]:hover,
+.donate-btn:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
   transition: all 0.2s ease;
 }
@@ -199,16 +191,10 @@ button:hover, input[type=email]:hover, .donate-btn:hover {
   height: 150px;
   border-radius: 25px;
   object-fit: cover;
-  animation: slideInRight 0.6s ease-out forwards;
-  animation-delay: 1.1s;
-  opacity: 0;
 }
 
 .donate-content {
   flex: 1;
-  animation: fadeIn 0.6s ease-out forwards;
-  animation-delay: 1.6s;
-  opacity: 0;
 }
 
 .donate-content h4 {
@@ -265,17 +251,17 @@ button:hover, input[type=email]:hover, .donate-btn:hover {
 }
 
 .footer-note a {
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    color: #fff;
-    text-align: end;
-    transition: all .3s ease;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  text-align: end;
+  transition: all 0.3s ease;
 }
 
 .footer-note a:hover {
-    opacity: 0.7;
-    transition: all 1s ease;
+  opacity: 0.7;
+  transition: all 1s ease;
 }
 
 @-webkit-keyframes blink-1 {
@@ -289,65 +275,69 @@ button:hover, input[type=email]:hover, .donate-btn:hover {
     opacity: 0;
   }
 }
-@keyframes blink-1 {
-  0%,
-  50%,
-  100% {
-    opacity: 0.2;
-  }
-  25%,
-  75% {
+@keyframes fadeIn {
+  0% {
     opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
 }
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 @keyframes slideInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
 /* Пульсация кнопки Поддержать */
 @keyframes pulseOpacity {
-    0%,
-    100% {
-        opacity: 0.6;
-    }
-    50% {
-        opacity: 1;
-    }
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/*  Анимации по классам */
+.fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+}
+.fadeInUp {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+.slideInRight {
+  animation: slideInRight 0.6s ease-out forwards;
+  animation-delay: 1.1s;
+  opacity: 0;
+}
+.pulseOpacity {
+  animation: pulseOpacity 3s ease-in-out infinite;
 }
 
 /* terms page */
-
 .terms-page {
   padding: 60px 0;
-  background: url('./images/reviews.png') center 33vh no-repeat;
+  background: url("./images/reviews.png") center 33vh no-repeat;
   background-size: cover;
 }
 
