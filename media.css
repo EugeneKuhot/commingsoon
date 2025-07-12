@@ -1,171 +1,124 @@
 /* Desktop & Tablets */
-
-@media screen and (max-width: 1400px) {
-  .callToActionBGWrap.callToAction .mainTitle {
-    width: 55%;
-    font-size: 2rem;
-  }
-  .callToActionBGWrap.callToAction .slogan {
-    font-size: 1.3rem;
-  }
-  .callToActionBGWrap.callToAction .leaveEmail {
-    font-size: 1.15rem;
-  }
-  .mailWrapper {
-    width: 230px;
-    height: 40px;
-  }
-  .mailWrapper a {
-    font-size: 0.9rem;
-  }
-  .donate {
-    width: 80%;
-  }
-  .donateInfo h4 {
-    width: 45%;
-    line-height: 24px;
-  }
-  .donateInfo p {
-    font-size: 0.9rem;
-    width: 40%;
-  }
-  .donate img {
-    width: 180px;
-    height: 173px;
-  }
-  .container {
-    padding: 0;
-  }
-  .header {
-    padding: 25px 0;
-  }
-  .donateInfo .donateButton {
-    width: 143px;
-    height: 27px;
-    font-size: 0.9rem;
-    margin: 9px 15px;
-  }
-}
-@media screen and (max-width: 1300px) {
-  .callToActionBGWrap {
-    background-image: -webkit-image-set(
-      url("./images/br1300.png") 1x,
-      url("./images/retina1300.webp") 3x
-    );
-    background-image: image-set(
-      url("./images/br1300.png") 1x,
-      url("./images/retina1300.webp") 3x
-    );
-    background-size: cover;
-  }
-  .callToActionBGWrap.callToAction .mainTitle {
-    font-size: 2rem;
-  }
-  .callToActionBGWrap.callToAction .slogan {
-    font-size: 1.1rem;
-  }
-  .callToActionBGWrap.callToAction .leaveEmail {
-    font-size: 1rem;
-  }
-  .donateInfo h4 {
-    font-size: 1rem;
-  }
-  .donateInfo p {
-    font-size: 0.8rem;
-  }
-  .donate img {
-    width: 180px;
-    height: 175px;
-  }
-  .donateInfo {
-    padding: 0;
-  }
-  .donateInfo .donateButton {
-    width: 143px;
-    height: 27px;
-    font-size: 0.9rem;
-    margin: 9px 15px;
-  }
-}
+  
 @media screen and (max-width: 1220px) {
-  .callToActionBGWrap.callToAction .mainTitle {
-    width: 70%;
+  .bodyBG {
+  background-image: image-set(
+    url("./images/bg1200.webp") 1x,
+    url("./images/bg1200Retina.webp") 2x
+  );
+}
+  .hero .hero-title {
     font-size: 2.4rem;
   }
-  .callToActionBGWrap.callToAction .slogan {
-    font-size: 1.5rem;
-    width: 65%;
-  }
-  .callToActionBGWrap.callToAction .leaveEmail {
+  .hero .hero-subtitle {
     font-size: 1.3rem;
+    width: 90%;
   }
-  .donateInfo h4 {
-    width: 70%;
+  .hero .hero-description{
+font-size: 1.15rem;
   }
-  .donateInfo p {
-    width: 55%;
+  .email-link{
+    font-size: 0.9rem;
+    padding: 12px 12px 12px 35px
+  }
+  .email-link::before{
+    width: 17px;
+    height: 17px;
+    left: 12px;
+  }
+  .donate-content h4 {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+  .donate-content p {
+    width: 60%;
+    font-size: 0.9rem;
   }
   .donate img {
     width: 142px;
     height: 135px;
   }
 }
-@media screen and (max-width: 1120px) {
-  .callToActionBGWrap.callToAction .mainTitle {
+@media screen and (max-width: 1060px) {
+  .container{
+    padding: 30px 10px;
+  }
+   .hero .hero-title{
     font-size: 2.1rem;
   }
-  .callToActionBGWrap.callToAction .slogan {
-    font-size: 1.3rem;
-  }
-  .callToActionBGWrap.callToAction .leaveEmail {
-    font-size: 1.1rem;
-  }
-  .donate {
-    width: 65%;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .donateInfo h4 {
-    font-size: 0.9rem;
-  }
-  .donateInfo p {
-    font-size: 0.7rem;
-  }
-  .donate img {
-    width: 140px;
-    height: 135px;
-  }
-  .callToActionBGWrap.callToAction .mainTitle {
-    font-size: 1.9rem;
-  }
-  .callToActionBGWrap.callToAction .slogan {
+  .hero .hero-subtitle {
     font-size: 1.2rem;
   }
-  .callToActionBGWrap.callToAction .leaveEmail {
+  .hero .hero-description {
     font-size: 1rem;
   }
-}
-@media screen and (max-width: 960px) {
+  .newsletter input[type="email"]{
+    width: 280px;
+    height: 55px;
+    font-size: 1rem;
+  }
+  .newsletter button{
+    width: 140px;
+    height: 55px;
+    font-size: 1.1rem;
+  }
+  .footer{
+    font-size: 12px;
+  }
   .donate img {
-    width: 132px;
-    height: 125px;
+    width: 135px;
+    height: 128px;
   }
-  .donateInfo h4 {
+  .donate-content h4 {
+    width: 65%;
+    font-size: 1rem;
+  }
+  .donate-content p {
+    width: 60%;
     font-size: 0.8rem;
-    width: 75%;
   }
-  .donate {
+  .footer-note a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:950px) {
+  .bodyBG {
+  background-image: image-set(
+    url("./images/bg950.webp") 1x,
+    url("./images/bg950Retina.webp") 2x
+  );
+  }
+}
+@media screen and (max-width:930px){
+  .container{
+    padding: 30px 0;
+  }
+  .hero .hero-title{
+    font-size: 1.9rem;
+  }
+  .hero .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .hero .hero-description {
+    font-size: 1rem;
+  }
+  .donate img {
+    width: 125px;
+    height: 118px;
+  }
+  .donate-content h4 {
+    width: 60%;
+    margin: 0 0 4px 0;
+  }
+  .donate-content p{
     width: 55%;
   }
-  .donateInfo p {
-    width: 70%;
-  }
-  .donateInfo .donateButton {
-    width: 125px;
-    height: 21px;
+  .donate-content .donate-btn{
+    padding: 5px 27px;
     font-size: 0.8rem;
   }
 }
+
 
 /* terms page */
 
