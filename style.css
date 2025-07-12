@@ -18,7 +18,7 @@ body {
     url("./images/backgroundRetina.webp") 2x
   );
   background-size: cover;
-  background-position-y: 25%;
+  background-position: 25% 50%;
   background-repeat: no-repeat;
 }
 
@@ -391,4 +391,109 @@ input[type="email"]:hover,
 
 .link {
   color: #618135;
+}
+
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Тостовое сообщение */
+.toast {
+  position: relative;
+  min-width: 250px;
+  max-width: 320px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  color: #333;
+  border-left: 6px solid;
+  transform: translateY(-120%);
+  opacity: 0;
+  animation: toastIn 0.5s ease-out forwards;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.toast.success {
+  background-color: #f8f4ec;
+  border-color: #8FB980;
+}
+
+.toast.error {
+  background-color: #f7e9ea;
+  border-color: #d28899;
+}
+
+.toast .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+}
+
+.toast .close-btn:hover {
+  color: #000;
+}
+
+.toast .timeline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #ccc;
+  animation: shrink linear forwards;
+}
+
+.toast.success .timeline {
+  background-color: #8FB980;
+}
+
+.toast.error .timeline {
+  background-color: #d28899;
+}
+
+@keyframes toastIn {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(20%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toastOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes shrink {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
 }
