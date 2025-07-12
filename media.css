@@ -1,0 +1,301 @@
+/* Desktop & Tablets */
+  
+@media screen and (max-width: 1220px) {
+  .bodyBG {
+  background-image: image-set(
+    url("./images/bg1200.webp") 1x,
+    url("./images/bg1200Retina.webp") 2x
+  );
+}
+  .hero .hero-title {
+    font-size: 2.4rem;
+  }
+  .hero .hero-subtitle {
+    font-size: 1.3rem;
+    width: 90%;
+  }
+  .hero .hero-description{
+font-size: 1.15rem;
+  }
+  .email-link{
+    font-size: 0.9rem;
+    padding: 12px 12px 12px 35px
+  }
+  .email-link::before{
+    width: 17px;
+    height: 17px;
+    left: 12px;
+  }
+  .donate-content h4 {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+  .donate-content p {
+    width: 60%;
+    font-size: 0.9rem;
+  }
+  .donate img {
+    width: 142px;
+    height: 135px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .container{
+    padding: 30px 10px;
+  }
+   .hero .hero-title{
+    font-size: 2.1rem;
+  }
+  .hero .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .hero .hero-description {
+    font-size: 1rem;
+  }
+  .newsletter input[type="email"]{
+    width: 280px;
+    height: 55px;
+    font-size: 1rem;
+  }
+  .newsletter button{
+    width: 140px;
+    height: 55px;
+    font-size: 1.1rem;
+  }
+  .footer{
+    font-size: 12px;
+  }
+  .donate img {
+    width: 135px;
+    height: 128px;
+  }
+  .donate-content h4 {
+    width: 65%;
+    font-size: 1rem;
+  }
+  .donate-content p {
+    width: 60%;
+    font-size: 0.8rem;
+  }
+  .footer-note a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:950px) {
+  .bodyBG {
+  background-image: image-set(
+    url("./images/bg950.webp") 1x,
+    url("./images/bg950Retina.webp") 2x
+  );
+  }
+}
+@media screen and (max-width:930px){
+  .container{
+    padding: 30px 0;
+  }
+  .hero .hero-title{
+    font-size: 1.9rem;
+  }
+  .hero .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .hero .hero-description {
+    font-size: 1rem;
+  }
+  .donate img {
+    width: 125px;
+    height: 118px;
+  }
+  .donate-content h4 {
+    width: 60%;
+    margin: 0 0 4px 0;
+  }
+  .donate-content p{
+    width: 55%;
+  }
+  .donate-content .donate-btn{
+    padding: 5px 27px;
+    font-size: 0.8rem;
+  }
+}
+
+
+/* terms page */
+
+@media (max-width: 768px) {
+  .terms-page .container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .terms-page .title {
+    font-size: 1.8rem;
+  }
+
+  .terms-page .section-title {
+    font-size: 1.5rem;
+  }
+
+  .terms-page .paragraph {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-page .container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .terms-page .title {
+    font-size: 1.5rem;
+  }
+
+  .terms-page .section {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .terms-page .section-title {
+    font-size: 1.2rem;
+  }
+
+  .terms-page .paragraph {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile version */
+/*
+@media screen and (max-width: 820px) {
+  .callToActionBGWrap {
+    background-image: image-set(
+      url("../../../../assets/images/CAT-mobile-background.png") 1x,
+      url("../../../../assets/images/CAT-mobile-background-retina.png") 2x
+    );
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .callToActionBGWrap.callToAction {
+    justify-content: flex-start;
+    height: 100vh;
+
+    background-image: -webkit-image-set(
+      url("./images/CAT-mobile-background.png") 1x,
+      url("./images/CAT-mobile-background-retina.png") 2x
+    );
+    background-image: image-set(
+      url("./images/CAT-mobile-background.png") 1x,
+      url("./images/CAT-mobile-background-retina.png") 2x
+    );
+    background-size: cover;
+    background-position: center;
+  }
+  .callToActionBGWrap.callToAction .mainTitle {
+    width: 100%;
+    margin-top: 20px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .callToActionBGWrap.callToAction .mainTitle .firmNameInMainTitle {
+    display: block;
+  }
+
+  .callToActionBGWrap.callToAction .slogan {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .callToActionBGWrap.callToAction .mainToCourseLink {
+    margin: 20px auto 0;
+    color: #fff;
+    background: #618135;
+  }
+  .callToActionBGWrap.callToAction .container {
+    padding-top: 0;
+    margin-top: 150px;
+    width: 100%;
+  }
+  .newsletter-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .footer {
+    width: 265px;
+    color: white;
+    background-color: rgba(29, 25, 25, 0.579);
+    border-radius: 0 5px 0 0;
+    margin-left: -21px;
+    margin-bottom: 0;
+    padding: 5px 5px 5px 15px;
+  }
+  .footer a {
+    color: #69ad61;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  .headerNav {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .callToActionBGWrap.callToAction .mainTitle {
+    font-size: 25px;
+  }
+  .callToActionBGWrap.callToAction .slogan {
+    font-size: 15px;
+  }
+  .newsletter-form {
+    margin-top: 30px;
+  }
+  .newsletter-form .form-input {
+    font-size: 16px;
+  }
+  .newsletter-form .form-button {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .callToActionBGWrap.callToAction .slogan {
+    font-size: 13px;
+  }
+  .callToActionBGWrap.callToAction .mainTitle {
+    font-size: 22px;
+    line-height: 34px;
+  }
+  .callToActionBGWrap.callToAction .container {
+    margin-top: 120px;
+  }
+  .newsletter-form .form-button {
+    font-size: 15px;
+    width: 70px;
+  }
+}
+input {
+  width: 230px;
+}
+.newsletter-form .form-input {
+  font-size: 14px;
+}
+@media screen and (max-width: 360px) {
+  .callToActionBGWrap.callToAction .container {
+    margin-top: 190px;
+  }
+  .footer {
+    font-size: 11px;
+    padding: 5px 2px 5px 20px;
+  }
+  .callToActionBGWrap.callToAction .slogan {
+    font-size: 12px;
+  }
+}
