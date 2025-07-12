@@ -116,6 +116,10 @@ body {
   color: #32477c;
 }
 
+.highlighBlack {
+  color: #000;
+}
+
 .hero-subtitle {
   margin: 0 0 45px 0;
   font-size: 22px;
