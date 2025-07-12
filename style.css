@@ -415,6 +415,7 @@ input[type="email"]:hover,
   padding: 16px 20px;
   border-radius: 12px;
   font-size: 16px;
+  font-weight: 500;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   color: #333;
   border-left: 6px solid;

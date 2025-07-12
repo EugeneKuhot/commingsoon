@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    function showToast(msg, type = "success", duration = 4000) {
+    function showToast(msg, type = "success", duration = 6000) {
         const toast = document.createElement("div");
         toast.className = `toast ${type}`;
         toast.innerHTML = `
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const removeToast = toast => {
-        toast.style.animation = "toastOut 0.4s ease-in forwards";
-        setTimeout(() => toast.remove(), 400);
+        toast.style.animation = "toastOut 0.5s ease-in forwards";
+        setTimeout(() => toast.remove(), 500);
     };
 });
