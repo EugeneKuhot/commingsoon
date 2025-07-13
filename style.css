@@ -512,6 +512,6 @@ input[type="email"]:hover,
     width: 100%;
   }
   to {
-    width: 0%;
+    width: 0;
   }
 }
