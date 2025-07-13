@@ -244,10 +244,27 @@ input[type="email"]:hover,
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
 .donate-btn:hover {
   background-color: #f7f5ec;
   color: #618135;
+}
+.mobile-donate-btn {
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #618135;
+  border: 2px solid #618135;
+  background-color: transparent;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 35px;
+  transition: all 0.2s ease;
+}
+.mobile-donate-btn:hover {
+  background-color: #618135;
+  color: #f7f5ec;
 }
 
 /* Footer */
@@ -428,7 +445,7 @@ input[type="email"]:hover,
 
 .toast.success {
   background-color: #f8f4ec;
-  border-color: #8FB980;
+  border-color: #8fb980;
 }
 
 .toast.error {
@@ -461,7 +478,7 @@ input[type="email"]:hover,
 }
 
 .toast.success .timeline {
-  background-color: #8FB980;
+  background-color: #8fb980;
 }
 
 .toast.error .timeline {
