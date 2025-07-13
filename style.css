@@ -6,7 +6,6 @@
 body {
   display: flex;
   flex-direction: column;
-  height: var(--app-height);
   min-height: var(--app-height);
   margin: 0;
   padding: 0;
