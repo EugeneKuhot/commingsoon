@@ -6,20 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", async e => {
         e.preventDefault();
+
         try {
-            const res = await fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            });
+            const res = await emailjs.sendForm(
+                "service_ublo17q",
+                "template_ixc2zpc",
+                form
+            );
 
-            const msg = res.ok
-                ? "Dziękujemy! E-mail zapisany. Gdy ruszymy, otrzymasz wiadomość ze zniżką."
-                : (await res.json())?.errors?.map(e => e.message).join(", ") || "Ups! Coś poszło nie tak.";
-
-            showToast(msg, res.ok ? "success" : "error");
-            if (res.ok) form.reset();
-        } catch {
+            showToast("Dziękujemy! Otrzymasz e-mail z kodem zniżkowym.", "success");
+            form.reset();
+        } catch (err) {
+            console.error("EmailJS error:", err);
             showToast("Ups! Nie udało się wysłać formularza.", "error");
         }
     });
@@ -32,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="close-btn" aria-label="Zamknij">&times;</button>
       <div class="timeline" style="animation: shrink ${duration}ms linear forwards;"></div>
     `;
-
         toast.querySelector(".close-btn").onclick = () => removeToast(toast);
         container.appendChild(toast);
         setTimeout(() => removeToast(toast), duration);
