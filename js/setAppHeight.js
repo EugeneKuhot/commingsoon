@@ -1,7 +1,6 @@
-function setAppHeight() {
-    document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+function setInitialAppHeight() {
+    const appHeight = window.innerHeight;
+    document.documentElement.style.setProperty('--app-height', `${appHeight}px`);
 }
 
-window.addEventListener('resize', setAppHeight);
-window.addEventListener('orientationchange', setAppHeight);
-window.addEventListener('DOMContentLoaded', setAppHeight);
+window.addEventListener('DOMContentLoaded', setInitialAppHeight);
