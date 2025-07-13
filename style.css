@@ -6,7 +6,8 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100svh;
+  height: var(--app-height);
+  min-height: var(--app-height);
   margin: 0;
   padding: 0;
   font-family: "ProbaPro", sans-serif;
@@ -96,7 +97,7 @@ body {
 }
 
 .hero-title {
-  margin-top: calc(15svh - 20px);
+  margin-top: calc(15vh - 20px);
   margin-bottom: 20px;
   font-size: 45px;
   font-weight: 600;
@@ -367,7 +368,7 @@ input[type="email"]:hover,
 /* terms page */
 .terms-page {
   padding: 60px 0;
-  background: url("./images/reviews.png") center 33svh no-repeat;
+  background: url("./images/reviews.png") center 33vh no-repeat;
   background-size: cover;
 }
 
