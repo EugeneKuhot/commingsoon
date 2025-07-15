@@ -247,7 +247,7 @@ input[type="email"]:hover,
 }
 .mobile-donate-btn {
   padding: 10px 0;
-  width: 100%;
+  width: 60%;
   text-align: center;
   font-size: 1rem;
   color: #618135;
