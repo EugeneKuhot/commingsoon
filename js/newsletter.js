@@ -1,28 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("newsletterForm");
   const container = document.getElementById("toast-container");
+  const submitBtn = document.querySelector("#submit-btn");
 
   if (!form || !container) return;
 
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener("submit", async e => {
     e.preventDefault();
+    submitBtn.disabled = true;
     try {
-      const res = await fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      });
+      const res = await emailjs.sendForm(
+          "service_ublo17q",
+          "template_ixc2zpc",
+          form
+      );
 
-      const msg = res.ok
-        ? "Dziękujemy! E-mail zapisany. Gdy ruszymy, otrzymasz wiadomość ze zniżką."
-        : (await res.json())?.errors?.map((e) => e.message).join(", ") ||
-          "Ups! Coś poszło nie tak.";
-
-      showToast(msg, res.ok ? "success" : "error");
-      if (res.ok) form.reset();
-    } catch {
+      showToast("Dziękujemy! Otrzymasz e-mail z kodem rabatowym.", "success");
+      form.reset();
+    } catch (err) {
+      console.error("EmailJS error:", err);
       showToast("Ups! Nie udało się wysłać formularza.", "error");
     }
+    submitBtn.disabled = false;
   });
 
   function showToast(msg, type = "success", duration = 6000) {
