@@ -1,5 +1,12 @@
-/* Desktop & Tablets */
-
+/* Desktop */
+@media (min-width: 2000px) {
+  .bodyBG {
+    background-image: image-set(
+      url("./images/bg2000.png") 1x,
+      url("./images/bg2000Retina.png") 2x
+    );
+  }
+}
 @media (max-width: 1220px) {
   .bodyBG {
     background-image: image-set(
