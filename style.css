@@ -299,7 +299,7 @@ input[type="email"]:hover,
   0%,
   50%,
   100% {
-    opacity: 0.2;
+    opacity: 1;
   }
   25%,
   75% {
